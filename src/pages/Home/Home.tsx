@@ -4,7 +4,7 @@ import rocket from '../../assets/foguete.png'
 export const Home = ({ isOpen }: any) => {
   return (
     <>
-      <S.Home>
+      <S.Home id='home'>
         <S.HomeContainer>
           <S.HomeContent>
             <S.HomeTitle>Gabriel</S.HomeTitle>

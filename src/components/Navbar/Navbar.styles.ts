@@ -21,13 +21,13 @@ export const Navbar = styled.nav<NavItemsProps>`
 
 export const NavbarTitle = styled.h1`
   color: #fff;
-  font-size: 16px;
+  font-size: 22px;
   font-weight: 400;
 `
 
 export const NavbarTitleStrong = styled.span`
   font-weight: bold;
-  font-size: 18px;
+  font-size: 28px;
   color: #18D26F;
 `
 
@@ -81,7 +81,7 @@ export const HamburgerContainer = styled.div`
 export const Fade = styled.div<NavItemsProps>`
   ${({ isOpen }) => css`
     position: absolute;
-    background-color: #485550;
+    background-color: #24282C;
     width: ${isOpen ? '100%' : '0'};
     height: ${isOpen ? '100vh' : '0'};
     transition: all 0.5s ease;
