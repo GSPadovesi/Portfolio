@@ -34,8 +34,8 @@ export const NavbarList = styled.ul<NavItemsProps>`
     margin-right: auto;
     text-align: center;
     width: ${isOpen ? '100%' : '0'};
-    /* background-color: #24282C; */
     transition: all .6s ease;
+    z-index: 20;
     cursor: pointer;
   `}
 
@@ -82,6 +82,6 @@ export const Fade = styled.div<NavItemsProps>`
     top: ${isOpen ? '8rem' : '-700px'};
     right: ${isOpen ? '0' : '-1000px'};
     border-radius: 0 0 0 50%;
-    z-index: -1;
+    z-index: 10;
   `}
 `
