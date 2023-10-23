@@ -1,17 +1,22 @@
 import styled, { css } from "styled-components";
 
 interface NavItemsProps {
-  isOpen: boolean;
+  isOpen?: boolean;
+  isNavbar?: boolean;
 }
 
-export const Navbar = styled.nav`
+export const Navbar = styled.nav<NavItemsProps>`
+  ${({ isNavbar }) => css`
+    background-color: ${isNavbar ? '#24282C' : 'transparent'};
+  `}
   position: fixed;
   width: 100%;
   padding: 2.4rem;
-  background-color: #24282C;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  transition: all 0.6s ease;
+  z-index: 30;
 `;
 
 export const NavbarTitle = styled.h1`
@@ -22,6 +27,7 @@ export const NavbarTitle = styled.h1`
 
 export const NavbarTitleStrong = styled.span`
   font-weight: bold;
+  font-size: 18px;
   color: #18D26F;
 `
 

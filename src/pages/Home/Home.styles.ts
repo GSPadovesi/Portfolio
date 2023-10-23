@@ -120,7 +120,7 @@ export const HomeTitleStrong = styled.span`
   font-weight: bold;
   color: #18D26F;
   font-size: 4.5rem;
-  /* margin-left: 10px; */
+  /* margin-left: px; */
 
   @media(min-width: 768px){
     font-size: 6rem;
@@ -151,4 +151,11 @@ export const HomeDescription = styled.p`
   @media(min-width: 1440px){
     font-size: 3rem;
   }
+`
+
+
+export const Teste = styled.section`
+  width: 100%;
+  height: 200vh;
+  background-color: grey;
 `

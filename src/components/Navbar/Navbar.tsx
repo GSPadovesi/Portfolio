@@ -1,7 +1,10 @@
+import { useState } from 'react';
 import { Hamburger } from './Hamburger/Hamburger';
 import * as S from './Navbar.styles';
 
 export const Navbar = ({ isOpen, setIsOpen }: any) => {
+
+  const [navbar, setNavbar] = useState(false);
 
   const scrollToSection = (e: any) => {
     const target = e.target.dataset.target;
@@ -9,11 +12,19 @@ export const Navbar = ({ isOpen, setIsOpen }: any) => {
     element?.scrollIntoView({ behavior: 'smooth' });
   }
 
-  console.log(isOpen, setIsOpen)
+  const changeBackground = () => {
+    if (window.scrollY >= 80) {
+      setNavbar(true);
+    } else {
+      setNavbar(false);
+    }
+  }
+
+  window.addEventListener('scroll', changeBackground)
 
   return (
-    <S.Navbar>
-      <S.NavbarTitle>Estou <S.NavbarTitleStrong>Pensando</S.NavbarTitleStrong></S.NavbarTitle>
+    <S.Navbar isNavbar={navbar}>
+      <S.NavbarTitle>Gabriel <S.NavbarTitleStrong>Santana</S.NavbarTitleStrong></S.NavbarTitle>
       <S.HamburgerContainer>
         <Hamburger isOpen={isOpen} setIsOpen={setIsOpen} />
       </S.HamburgerContainer>
