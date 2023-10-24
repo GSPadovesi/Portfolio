@@ -1,5 +1,5 @@
 import * as S from './Home.styles';
-import rocket from '../../assets/foguete.png'
+import rocket from '../../assets/rocket.png'
 
 export const Home = ({ isOpen }: any) => {
   return (
@@ -7,8 +7,8 @@ export const Home = ({ isOpen }: any) => {
       <S.Home id='home'>
         <S.HomeContainer>
           <S.HomeContent>
-            <S.HomeTitle>Gabriel</S.HomeTitle>
-            <S.HomeTitleStrong>Santana</S.HomeTitleStrong>
+            <S.HomeTitle>Gabriel <S.HomeTitleStrong>Santana</S.HomeTitleStrong> </S.HomeTitle>
+
             <S.HomeDescription>Developer</S.HomeDescription>
           </S.HomeContent>
 

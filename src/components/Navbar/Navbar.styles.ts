@@ -25,7 +25,7 @@ export const Navbar = styled.nav<NavItemsProps>`
 `;
 
 export const NavbarTitle = styled.h1`
-  color: #fff;
+  color: #F2F5ED;
   font-size: 22px;
   font-weight: 400;
 `
@@ -59,7 +59,7 @@ export const NavbarList = styled.ul<NavItemsProps>`
 
 export const NavbarListItem = styled.li`
   display: block;
-  color: #fff;
+  color: #F2F5ED;
   text-decoration: none;
   margin-right: 1rem;
   font-size: 1.5rem;
@@ -124,7 +124,7 @@ export const InputDark = styled.input<any>`
 export const WrapperSwitchDark = styled.div<NavItemsProps>`
   position: relative;
   /* padding: 6px; */
-  background-color: #ffffff;
+  background-color: #F2F5ED;
   width: 50px;
   height: 20px;
   border-radius: 20px;

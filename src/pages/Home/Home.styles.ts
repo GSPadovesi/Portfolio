@@ -37,6 +37,11 @@ export const HomeContent = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: center;
+
+  @media(min-width: 1024px){
+    align-items: flex-start;
+    text-align: left;
+  }
 `
 
 export const HomeImage = styled.div<HomeProps>`
@@ -93,8 +98,8 @@ export const HomeImage = styled.div<HomeProps>`
 `
 
 export const HomeTitle = styled.h1`
-  color: #fff;
-  font-size: 3.5rem;
+  color: #F2F5ED;
+  font-size: 32px;
   font-weight: 400;
   -webkit-text-stroke-width: 1px;
   -webkit-text-stroke-color: black;
@@ -102,53 +107,43 @@ export const HomeTitle = styled.h1`
   /* margin-bottom: 16px; */
 
   @media(min-width: 768px){
-    font-size: 5rem;
+    font-size: 42px;
   }
 
   @media(min-width: 1024px){
-    font-size: 7rem;
-  -webkit-text-stroke-width: 2px;
-
+    font-size: 52px;
   }
 
   @media(min-width: 1440px){
-    font-size: 9rem;
+    font-size: 62px;
   }
 `
 
 export const HomeTitleStrong = styled.span`
   font-weight: bold;
   color: #18D26F;
-  font-size: 4.5rem;
+  font-size: 36px;
 
-  @media(min-width: 768px){
-    font-size: 6rem;
+ @media(min-width: 768px){
+    font-size: 46px;
   }
-
   @media(min-width: 1024px){
-    font-size: 8rem;
+    font-size: 56px;
   }
-
+  
+  
   @media(min-width: 1440px){
-    font-size: 10rem;
+    font-size: 66px;
   }
 `
 
 export const HomeDescription = styled.p`
-  color: #fff;
-  font-size: 1.5rem;
-  text-align: center;
+  color: #F2F5ED;
+  font-size: 20px;
+  text-align: left;
 
   @media(min-width: 768px){
-    font-size: 2rem;
-  }
-
-  @media(min-width: 1024px){
-    font-size: 2.5rem;
-  }
-
-  @media(min-width: 1440px){
-    font-size: 3rem;
+    font-size: 30px;
   }
 `
 

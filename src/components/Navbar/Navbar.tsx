@@ -31,7 +31,7 @@ export const Navbar = ({ isOpen, setIsOpen }: any) => {
 
   return (
     <S.Navbar isNavbar={navbar}>
-      <S.NavbarTitle>Gabriel <S.NavbarTitleStrong>Santana</S.NavbarTitleStrong></S.NavbarTitle>
+      <S.NavbarTitle>Meu <S.NavbarTitleStrong>Portfolio</S.NavbarTitleStrong></S.NavbarTitle>
       <S.HamburgerContainer>
         <Hamburger isOpen={isOpen} setIsOpen={setIsOpen} />
       </S.HamburgerContainer>
