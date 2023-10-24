@@ -64,6 +64,7 @@ export const NavbarListItem = styled.li`
   margin-right: 1rem;
   font-size: 1.5rem;
   margin-top: 16px;
+  margin-right: 32px;
 
   @media(min-width: 768px) {
     display: inline-block;

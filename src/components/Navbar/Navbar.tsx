@@ -3,8 +3,9 @@ import { Hamburger } from './Hamburger/Hamburger';
 import sol from '../../assets/sol.png';
 import lua from '../../assets/lua.png';
 import * as S from './Navbar.styles';
+import { NavbarProps } from './Navbar.types';
 
-export const Navbar = ({ isOpen, setIsOpen }: any) => {
+export const Navbar = ({ isOpen, setIsOpen }: NavbarProps) => {
 
   const [navbar, setNavbar] = useState(false);
   const [checked, setChecked] = useState(true);

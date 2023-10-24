@@ -145,6 +145,10 @@ export const HomeDescription = styled.p`
   @media(min-width: 768px){
     font-size: 30px;
   }
+
+  @media(min-width: 1024px){
+    margin-left: 10px;
+  }
 `
 
 
