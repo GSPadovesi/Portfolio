@@ -7,8 +7,8 @@ interface NavItemsProps {
 }
 
 export const Navbar = styled.nav<NavItemsProps>`
-  ${({ isNavbar }) => css`
-    background-color: ${isNavbar ? '#24282C' : 'transparent'};
+  ${({ isNavbar, isChecked }) => css`
+    background-color: ${isNavbar && isChecked ? '#24282C' : isNavbar && !isChecked ? '#F2F5ED' : 'transparent'};
     box-shadow: ${isNavbar ? '0 0 10px rgba(0, 0, 0, 0.5)' : 'none'};
   `}
   position: fixed;
@@ -23,13 +23,13 @@ export const Navbar = styled.nav<NavItemsProps>`
   @media(min-width: 1024px){
     padding: 2.4rem;
   }
-
-
-
 `;
 
-export const NavbarTitle = styled.h1`
-  color: #F2F5ED;
+export const NavbarTitle = styled.h1<NavItemsProps>`
+  ${({ isChecked, isNavbar }) => css`
+    color: ${isChecked ? '#F2F5ED' : '#24282C'};
+  `}
+  /* color: #F2F5ED; */
   font-size: 22px;
   font-weight: 400;
 `
@@ -61,9 +61,12 @@ export const NavbarList = styled.ul<NavItemsProps>`
   }
 `;
 
-export const NavbarListItem = styled.li`
+export const NavbarListItem = styled.li<NavItemsProps>`
+  ${({ isChecked }) => css`
+    color: ${isChecked ? '#F2F5ED' : '#24282C'};
+  `}
+
   display: block;
-  color: #F2F5ED;
   text-decoration: none;
   margin-right: 1rem;
   font-size: 1.5rem;
