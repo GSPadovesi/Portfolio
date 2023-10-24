@@ -57,8 +57,8 @@ export const HomeImage = styled.div<HomeProps>`
   margin-top: 82px;
   
   >img{
-    width: 100px;
-    height: 100px;
+    width: 200px;
+    height: 200px;
     animation: rocket 5s infinite;
   }
 
@@ -70,22 +70,22 @@ export const HomeImage = styled.div<HomeProps>`
 
   @media(min-width: 768px){
     >img{
-      width: 200px;
-      height: 200px;
+      width: 350px;
+      height: 350px;
     }
   }
 
   @media(min-width: 1024px){
     >img{
-      width: 300px;
-      height: 300px;
+      width: 400px;
+      height: 400px;
     }
   }
 
   @media(min-width: 1440px){
     >img{
-      width: 400px;
-      height: 400px;
+      width: 450px;
+      height: 450px;
     }
   }
 
