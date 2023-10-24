@@ -36,6 +36,16 @@ export const Navbar = ({ isOpen, setIsOpen }: any) => {
         <S.NavbarListItem onClick={scrollToSection} data-target="home">About</S.NavbarListItem>
         <S.NavbarListItem onClick={scrollToSection} data-target="home">Contact</S.NavbarListItem>
       </S.NavbarList>
+      <S.WrapperSwitch>
+        <S.LabelDark for='change-theme'>
+          <S.InputDark type='checkbox' name='change-theme' id='change-theme' />
+          <S.WrapperSwitchDark>
+            <img src="" alt="" />
+            <img src="" alt="" />
+            <button></button>
+          </S.WrapperSwitchDark>
+        </S.LabelDark>
+      </S.WrapperSwitch>
     </S.Navbar>
   )
 }

@@ -95,3 +95,35 @@ export const Fade = styled.div<NavItemsProps>`
   border-radius: 0 0 0 50%;
   z-index: 10;
 `
+
+export const WrapperSwitch = styled.div`
+  width: auto;
+  display: none;
+  gap: 20px;
+
+  &:first-child{
+    margin-top: 20px;
+  }
+
+  @media(min-width: 768px) {
+    display: flex;
+    align-items: center;
+  }
+`
+
+export const LabelDark = styled.label<any>`
+`
+
+export const InputDark = styled.input<any>`
+  display: none;
+`
+
+export const WrapperSwitchDark = styled.div`
+  background-color: #ffffff;
+  width: 60px;
+  height: 20px;
+  border-radius: 20px;
+  border: 1px solid #000000;
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+`

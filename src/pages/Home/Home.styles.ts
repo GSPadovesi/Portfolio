@@ -48,7 +48,7 @@ export const HomeImage = styled.div<HomeProps>`
   justify-content: center;
   align-items: center;
   height: auto;
-  margin-top: 32px;
+  margin-top: 82px;
   
   >img{
     width: 100px;
