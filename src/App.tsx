@@ -2,6 +2,7 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import { Navbar } from './components/Navbar/Navbar'
 import { useState } from 'react';
 import { Home } from './pages/Home/Home';
+import { Github } from './components/Github/Github';
 import './App.css'
 
 function App() {
@@ -16,6 +17,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Home isOpen={isOpen} />} />
         </Routes>
+        <Github />
       </BrowserRouter >
     </>
   )

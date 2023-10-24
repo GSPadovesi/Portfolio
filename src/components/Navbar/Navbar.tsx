@@ -32,7 +32,7 @@ export const Navbar = ({ isOpen, setIsOpen, isChecked, setIsChecked }: NavbarPro
 
 
   return (
-    <S.Navbar isNavbar={navbar}>
+    <S.Navbar isNavbar={navbar} isChecked={isChecked === true}>
       <S.NavbarTitle>Meu <S.NavbarTitleStrong>Portfolio</S.NavbarTitleStrong></S.NavbarTitle>
 
       <S.NavbarList isOpen={isOpen}>

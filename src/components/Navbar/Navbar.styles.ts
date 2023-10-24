@@ -23,6 +23,9 @@ export const Navbar = styled.nav<NavItemsProps>`
   @media(min-width: 1024px){
     padding: 2.4rem;
   }
+
+
+
 `;
 
 export const NavbarTitle = styled.h1`
