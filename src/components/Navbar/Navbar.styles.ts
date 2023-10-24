@@ -3,6 +3,7 @@ import styled, { css } from "styled-components";
 interface NavItemsProps {
   isOpen?: boolean;
   isNavbar?: boolean;
+  isChecked?: boolean;
 }
 
 export const Navbar = styled.nav<NavItemsProps>`
@@ -100,6 +101,8 @@ export const WrapperSwitch = styled.div`
   width: auto;
   display: none;
   gap: 20px;
+  align-self: center;
+  justify-self: center;
 
   &:first-child{
     margin-top: 20px;
@@ -118,12 +121,63 @@ export const InputDark = styled.input<any>`
   display: none;
 `
 
-export const WrapperSwitchDark = styled.div`
+export const WrapperSwitchDark = styled.div<NavItemsProps>`
+  position: relative;
+  /* padding: 6px; */
   background-color: #ffffff;
-  width: 60px;
+  width: 50px;
   height: 20px;
   border-radius: 20px;
   border: 1px solid #000000;
   transition: all 0.3s ease-in-out;
   cursor: pointer;
+
+  >img{
+    width: 15px;
+    height: 15px;
+  }
+
+  .sun{
+    position: absolute;
+    top: 1px;
+    left: 5px;
+    transition: all 0.3s ease-in-out;
+    opacity: 0;
+  }
+
+  .moon{
+    position: absolute;
+    top: 1px;
+    right: 5px;
+    transition: all 0.3s ease-in-out;
+  }
+
+  ${({ isChecked }) => isChecked && css`
+    background-color: #18D26F;
+
+    .moon{
+      opacity: 0;
+    }
+
+    .sun{
+      opacity: 1;
+    }
+  `}
+`
+
+export const ButtonSwitch = styled.button<any>`
+  position: absolute;
+  background-color: #18D26F;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  top: 1px;
+  left: 2px;
+  transition: all 0.3s ease-in-out;
+  pointer-events: none;
+
+  ${({ isChecked }) => isChecked && css`
+    left: 30px;
+    background-color: #F2F5ED;
+  `}
 `
