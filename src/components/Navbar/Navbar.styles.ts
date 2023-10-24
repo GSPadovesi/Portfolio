@@ -11,12 +11,16 @@ export const Navbar = styled.nav<NavItemsProps>`
   `}
   position: fixed;
   width: 100%;
-  padding: 2.4rem;
+  padding: 1.5rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
   transition: all 0.6s ease;
   z-index: 30;
+
+  @media(min-width: 1024px){
+    padding: 2.4rem;
+  }
 `;
 
 export const NavbarTitle = styled.h1`
@@ -80,14 +84,14 @@ export const HamburgerContainer = styled.div`
 
 export const Fade = styled.div<NavItemsProps>`
   ${({ isOpen }) => css`
-    position: absolute;
-    background-color: #24282C;
     width: ${isOpen ? '100%' : '0'};
     height: ${isOpen ? '100vh' : '0'};
-    transition: all 0.5s ease;
-    top: ${isOpen ? '8rem' : '-700px'};
+    top: ${isOpen ? '6rem' : '-700px'};
     right: ${isOpen ? '0' : '-1000px'};
-    border-radius: 0 0 0 50%;
-    z-index: 10;
   `}
+  position: absolute;
+  background-color: #24282C;
+  transition: all 0.5s ease;
+  border-radius: 0 0 0 50%;
+  z-index: 10;
 `
