@@ -1,14 +1,13 @@
 import { useState } from 'react';
 import { Hamburger } from './Hamburger/Hamburger';
-import sol from '../../assets/sol.png';
-import lua from '../../assets/lua.png';
-import * as S from './Navbar.styles';
 import { NavbarProps } from './Navbar.types';
+import sun from '../../assets/sol.png';
+import moon from '../../assets/lua.png';
+import * as S from './Navbar.styles';
 
-export const Navbar = ({ isOpen, setIsOpen }: NavbarProps) => {
+export const Navbar = ({ isOpen, setIsOpen, isChecked, setIsChecked }: NavbarProps) => {
 
   const [navbar, setNavbar] = useState(false);
-  const [checked, setChecked] = useState(true);
 
   const scrollToSection = (e: any) => {
     const target = e.target.dataset.target;
@@ -17,8 +16,10 @@ export const Navbar = ({ isOpen, setIsOpen }: NavbarProps) => {
   }
 
   const changeTheme = () => {
-    setChecked(!checked);
+    setIsChecked(!isChecked);
   }
+
+  console.log(isChecked)
 
   const changeBackground = () => {
     if (window.scrollY >= 80) {
@@ -33,11 +34,6 @@ export const Navbar = ({ isOpen, setIsOpen }: NavbarProps) => {
   return (
     <S.Navbar isNavbar={navbar}>
       <S.NavbarTitle>Meu <S.NavbarTitleStrong>Portfolio</S.NavbarTitleStrong></S.NavbarTitle>
-      <S.HamburgerContainer>
-        <Hamburger isOpen={isOpen} setIsOpen={setIsOpen} />
-      </S.HamburgerContainer>
-
-      <S.Fade isOpen={isOpen} />
 
       <S.NavbarList isOpen={isOpen}>
         <S.NavbarListItem onClick={scrollToSection} data-target="home">Home</S.NavbarListItem>
@@ -50,13 +46,19 @@ export const Navbar = ({ isOpen, setIsOpen }: NavbarProps) => {
       <S.WrapperSwitch>
         <S.LabelDark for='change-theme' >
           <S.InputDark type='checkbox' name='change-theme' id='change-theme' onClick={changeTheme} />
-          <S.WrapperSwitchDark isChecked={checked === true}>
-            <img className='sun' src={sol} alt="Sol" />
-            <img className='moon' src={lua} alt="Lua" />
-            <S.ButtonSwitch isChecked={checked === true} />
+          <S.WrapperSwitchDark isChecked={isChecked === true}>
+            <img className='sun' src={sun} alt="Sol" />
+            <img className='moon' src={moon} alt="Lua" />
+            <S.ButtonSwitch isChecked={isChecked === true} />
           </S.WrapperSwitchDark>
         </S.LabelDark>
       </S.WrapperSwitch>
+
+      <S.HamburgerContainer>
+        <Hamburger isOpen={isOpen} setIsOpen={setIsOpen} />
+      </S.HamburgerContainer>
+
+      <S.Fade isOpen={isOpen} />
     </S.Navbar>
   )
 }

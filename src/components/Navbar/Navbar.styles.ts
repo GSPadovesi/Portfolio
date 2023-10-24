@@ -9,6 +9,7 @@ interface NavItemsProps {
 export const Navbar = styled.nav<NavItemsProps>`
   ${({ isNavbar }) => css`
     background-color: ${isNavbar ? '#24282C' : 'transparent'};
+    box-shadow: ${isNavbar ? '0 0 10px rgba(0, 0, 0, 0.5)' : 'none'};
   `}
   position: fixed;
   width: 100%;
@@ -100,7 +101,8 @@ export const Fade = styled.div<NavItemsProps>`
 
 export const WrapperSwitch = styled.div`
   width: auto;
-  display: none;
+  /* position: absolute; */
+  /* right: px; */
   gap: 20px;
   align-self: center;
   justify-self: center;
@@ -125,7 +127,7 @@ export const InputDark = styled.input<any>`
 export const WrapperSwitchDark = styled.div<NavItemsProps>`
   position: relative;
   /* padding: 6px; */
-  background-color: #F2F5ED;
+  background-color: #485550;
   width: 50px;
   height: 20px;
   border-radius: 20px;
@@ -168,7 +170,7 @@ export const WrapperSwitchDark = styled.div<NavItemsProps>`
 
 export const ButtonSwitch = styled.button<any>`
   position: absolute;
-  background-color: #18D26F;
+  background-color: #F2F5ED;
   width: 16px;
   height: 16px;
   border-radius: 50%;

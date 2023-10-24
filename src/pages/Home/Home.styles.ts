@@ -41,6 +41,7 @@ export const HomeContent = styled.div`
   @media(min-width: 1024px){
     align-items: flex-start;
     text-align: left;
+    margin-left: 32px;
   }
 `
 
@@ -64,7 +65,6 @@ export const HomeImage = styled.div<HomeProps>`
   @keyframes rocket {
     50%{
       transform: translateY(-20%);
-      /* transform: scale(2); */
     }
   }
 

@@ -7,12 +7,12 @@ import './App.css'
 function App() {
 
   const [isOpen, setIsOpen] = useState(false);
-
+  const [isChecked, setIsChecked] = useState(true);
 
   return (
     <>
       <BrowserRouter>
-        <Navbar isOpen={isOpen} setIsOpen={setIsOpen} />
+        <Navbar isOpen={isOpen} setIsOpen={setIsOpen} isChecked={isChecked} setIsChecked={setIsChecked} />
         <Routes>
           <Route path="/" element={<Home isOpen={isOpen} />} />
         </Routes>
