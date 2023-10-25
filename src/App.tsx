@@ -17,7 +17,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Home isOpen={isOpen} />} />
         </Routes>
-        <Github />
+        <Github isChecked={isChecked} />
       </BrowserRouter >
     </>
   )
