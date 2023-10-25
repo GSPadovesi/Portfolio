@@ -1,5 +1,5 @@
 import { HomeProps } from './Home.types';
-import rocket from '../../assets/rocket.png'
+import rocket from '../../../../assets/rocket.png'
 import * as S from './Home.styles';
 
 export const Home = ({ isOpen }: HomeProps) => {
@@ -8,8 +8,8 @@ export const Home = ({ isOpen }: HomeProps) => {
       <S.Home id='home'>
         <S.HomeContainer>
           <S.HomeContent>
-            <S.HomeTitle>Gabriel <S.HomeTitleStrong>Santana</S.HomeTitleStrong> </S.HomeTitle>
-            <S.HomeDescription>Developer</S.HomeDescription>
+            <S.HomeTitle>Transformando ideias em experiências <S.HomeTitleStrong>digitais incríveis.</S.HomeTitleStrong> </S.HomeTitle>
+            <S.HomeDescription>Desenvolvedor front-end</S.HomeDescription>
           </S.HomeContent>
 
           <S.HomeImage isOpen={isOpen}>
@@ -17,10 +17,6 @@ export const Home = ({ isOpen }: HomeProps) => {
           </S.HomeImage>
         </S.HomeContainer>
       </S.Home>
-
-      <S.Teste>
-
-      </S.Teste>
     </>
   )
 }

@@ -1,5 +1,5 @@
 import styled, { css } from 'styled-components';
-import space from '../../assets/space.jpg'
+import space from '../../../../assets/space.jpg'
 
 interface HomeProps {
   isOpen: boolean;
@@ -101,10 +101,7 @@ export const HomeTitle = styled.h1`
   color: #F2F5ED;
   font-size: 32px;
   font-weight: 400;
-  -webkit-text-stroke-width: 1px;
-  -webkit-text-stroke-color: black;
-  /* text-align: center; */
-  /* margin-bottom: 16px; */
+  font-family: 'Courier New', Courier, monospace;
 
   @media(min-width: 768px){
     font-size: 42px;
@@ -121,6 +118,7 @@ export const HomeTitle = styled.h1`
 
 export const HomeTitleStrong = styled.span`
   font-weight: bold;
+  font-family: 'Courier New', Courier, monospace;
   color: #18D26F;
   font-size: 36px;
 
@@ -149,11 +147,4 @@ export const HomeDescription = styled.p`
   @media(min-width: 1024px){
     margin-left: 10px;
   }
-`
-
-
-export const Teste = styled.section`
-  width: 100%;
-  height: 200vh;
-  background-color: grey;
 `
