@@ -28,19 +28,21 @@ export const Navbar = ({ isOpen, setIsOpen, isChecked, setIsChecked }: NavbarPro
   }
   window.addEventListener('scroll', changeBackground)
 
-  console.log(isChecked)
+  console.log('Navbar', navbar);
+  console.log('IsChecked', isChecked);
+
 
 
   return (
     <S.Navbar isNavbar={navbar} isChecked={isChecked === true}>
-      <S.NavbarTitle isChecked={isChecked === true}>Meu <S.NavbarTitleStrong>Portfolio</S.NavbarTitleStrong></S.NavbarTitle>
+      <S.NavbarTitle isChecked={isChecked === true} isNavbar={navbar}>Meu <S.NavbarTitleStrong>Portfolio</S.NavbarTitleStrong></S.NavbarTitle>
 
       <S.NavbarList isOpen={isOpen}>
-        <S.NavbarListItem isChecked={isChecked} onClick={scrollToSection} data-target="home">Home</S.NavbarListItem>
-        <S.NavbarListItem isChecked={isChecked} onClick={scrollToSection} data-target="home">Projects</S.NavbarListItem>
-        <S.NavbarListItem isChecked={isChecked} onClick={scrollToSection} data-target="home">Skills</S.NavbarListItem>
-        <S.NavbarListItem isChecked={isChecked} onClick={scrollToSection} data-target="home">About</S.NavbarListItem>
-        <S.NavbarListItem isChecked={isChecked} onClick={scrollToSection} data-target="home">Contact</S.NavbarListItem>
+        <S.NavbarListItem isChecked={isChecked} isNavbar={navbar} onClick={scrollToSection} data-target="home">Home</S.NavbarListItem>
+        <S.NavbarListItem isChecked={isChecked} isNavbar={navbar} onClick={scrollToSection} data-target="home">Projects</S.NavbarListItem>
+        <S.NavbarListItem isChecked={isChecked} isNavbar={navbar} onClick={scrollToSection} data-target="home">Skills</S.NavbarListItem>
+        <S.NavbarListItem isChecked={isChecked} isNavbar={navbar} onClick={scrollToSection} data-target="home">About</S.NavbarListItem>
+        <S.NavbarListItem isChecked={isChecked} isNavbar={navbar} onClick={scrollToSection} data-target="home">Contact</S.NavbarListItem>
       </S.NavbarList>
 
       <S.WrapperSwitch>

@@ -27,7 +27,7 @@ export const Navbar = styled.nav<NavItemsProps>`
 
 export const NavbarTitle = styled.h1<NavItemsProps>`
   ${({ isChecked, isNavbar }) => css`
-    color: ${isChecked ? '#F2F5ED' : '#24282C'};
+      color: ${isNavbar === false ? '#F2F5ED' : !!isNavbar && !!isChecked ? '#F2F5ED' : '#24282C'};
   `}
   /* color: #F2F5ED; */
   font-size: 22px;
@@ -62,8 +62,8 @@ export const NavbarList = styled.ul<NavItemsProps>`
 `;
 
 export const NavbarListItem = styled.li<NavItemsProps>`
-  ${({ isChecked }) => css`
-    color: ${isChecked ? '#F2F5ED' : '#24282C'};
+  ${({ isChecked, isNavbar }) => css`
+    color: ${isNavbar === false ? '#F2F5ED' : !!isNavbar && !!isChecked ? '#F2F5ED' : '#24282C'};
   `}
 
   display: block;
