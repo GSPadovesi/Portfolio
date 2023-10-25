@@ -37,6 +37,12 @@ export const HomeContent = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: center;
+
+  @media(min-width: 1024px){
+    align-items: flex-start;
+    text-align: left;
+    margin-left: 32px;
+  }
 `
 
 export const HomeImage = styled.div<HomeProps>`
@@ -48,39 +54,38 @@ export const HomeImage = styled.div<HomeProps>`
   justify-content: center;
   align-items: center;
   height: auto;
-  margin-top: 32px;
+  margin-top: 82px;
   
   >img{
-    width: 100px;
-    height: 100px;
+    width: 200px;
+    height: 200px;
     animation: rocket 5s infinite;
   }
 
   @keyframes rocket {
     50%{
       transform: translateY(-20%);
-      /* transform: scale(2); */
     }
   }
 
   @media(min-width: 768px){
     >img{
-      width: 200px;
-      height: 200px;
+      width: 350px;
+      height: 350px;
     }
   }
 
   @media(min-width: 1024px){
     >img{
-      width: 300px;
-      height: 300px;
+      width: 400px;
+      height: 400px;
     }
   }
 
   @media(min-width: 1440px){
     >img{
-      width: 400px;
-      height: 400px;
+      width: 450px;
+      height: 450px;
     }
   }
 
@@ -93,8 +98,8 @@ export const HomeImage = styled.div<HomeProps>`
 `
 
 export const HomeTitle = styled.h1`
-  color: #fff;
-  font-size: 3.5rem;
+  color: #F2F5ED;
+  font-size: 32px;
   font-weight: 400;
   -webkit-text-stroke-width: 1px;
   -webkit-text-stroke-color: black;
@@ -102,54 +107,47 @@ export const HomeTitle = styled.h1`
   /* margin-bottom: 16px; */
 
   @media(min-width: 768px){
-    font-size: 5rem;
+    font-size: 42px;
   }
 
   @media(min-width: 1024px){
-    font-size: 7rem;
-  -webkit-text-stroke-width: 2px;
-
+    font-size: 52px;
   }
 
   @media(min-width: 1440px){
-    font-size: 9rem;
+    font-size: 62px;
   }
 `
 
 export const HomeTitleStrong = styled.span`
   font-weight: bold;
   color: #18D26F;
-  font-size: 4.5rem;
-  /* margin-left: px; */
+  font-size: 36px;
 
-  @media(min-width: 768px){
-    font-size: 6rem;
+ @media(min-width: 768px){
+    font-size: 46px;
   }
-
   @media(min-width: 1024px){
-    font-size: 8rem;
+    font-size: 56px;
   }
-
+  
+  
   @media(min-width: 1440px){
-    font-size: 10rem;
+    font-size: 66px;
   }
 `
 
 export const HomeDescription = styled.p`
-  color: #fff;
-  font-size: 1.5rem;
-  text-align: center;
+  color: #F2F5ED;
+  font-size: 20px;
+  text-align: left;
 
   @media(min-width: 768px){
-    font-size: 2rem;
+    font-size: 30px;
   }
 
   @media(min-width: 1024px){
-    font-size: 2.5rem;
-  }
-
-  @media(min-width: 1440px){
-    font-size: 3rem;
+    margin-left: 10px;
   }
 `
 

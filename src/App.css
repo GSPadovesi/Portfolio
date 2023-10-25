@@ -20,7 +20,7 @@ button {
   max-width: 100%;
   /* overflow: auto; */
 }
-  /* ::-webkit-scrollbar-track {
+  ::-webkit-scrollbar-track {
     height: 0px;
     width: 6px;
     margin: 12px 0px;
@@ -38,5 +38,5 @@ button {
     height: 0px;
     border-radius: 4px;
     margin: 12px 0px;
-    background-color: #24308B;
-  }  */
+    background-color: #24282C;
+  } 
