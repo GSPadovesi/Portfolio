@@ -99,20 +99,22 @@ export const HomeImage = styled.div<HomeProps>`
 
 export const HomeTitle = styled.h1`
   color: #F2F5ED;
-  font-size: 32px;
+  font-size: 25px;
   font-weight: 400;
   font-family: 'Courier New', Courier, monospace;
+  text-align: center;
 
   @media(min-width: 768px){
-    font-size: 42px;
+    font-size: 32px;
   }
 
   @media(min-width: 1024px){
-    font-size: 52px;
+    font-size: 35px;
+    text-align: left;
   }
 
   @media(min-width: 1440px){
-    font-size: 62px;
+    font-size: 45px;
   }
 `
 
@@ -120,18 +122,20 @@ export const HomeTitleStrong = styled.span`
   font-weight: bold;
   font-family: 'Courier New', Courier, monospace;
   color: #18D26F;
-  font-size: 36px;
+  font-size: 26px;
+  margin-top: 10px;
 
  @media(min-width: 768px){
-    font-size: 46px;
+    font-size: 38px;
   }
+
   @media(min-width: 1024px){
-    font-size: 56px;
+    font-size: 40px;
+    text-align: center;
   }
-  
   
   @media(min-width: 1440px){
-    font-size: 66px;
+    font-size: 55px;
   }
 `
 
@@ -139,6 +143,7 @@ export const HomeDescription = styled.p`
   color: #F2F5ED;
   font-size: 20px;
   text-align: left;
+  margin-top: 32px;
 
   @media(min-width: 768px){
     font-size: 30px;
