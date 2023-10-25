@@ -1,8 +1,8 @@
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import { Navbar } from './components/Navbar/Navbar'
 import { useState } from 'react';
-import { Home } from './pages/Home/Home';
 import { Github } from './components/Github/Github';
+import { Main } from './pages/Main/Main';
 import './App.css'
 
 function App() {
@@ -15,7 +15,7 @@ function App() {
       <BrowserRouter>
         <Navbar isOpen={isOpen} setIsOpen={setIsOpen} isChecked={isChecked} setIsChecked={setIsChecked} />
         <Routes>
-          <Route path="/" element={<Home isOpen={isOpen} />} />
+          <Route path="/" element={<Main isOpen={isOpen} isChecked={isChecked} />} />
         </Routes>
         <Github isChecked={isChecked} />
       </BrowserRouter >

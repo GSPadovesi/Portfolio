@@ -39,8 +39,8 @@ export const Navbar = ({ isOpen, setIsOpen, isChecked, setIsChecked }: NavbarPro
 
       <S.NavbarList isOpen={isOpen}>
         <S.NavbarListItem isChecked={isChecked} isNavbar={navbar} onClick={scrollToSection} data-target="home">Home</S.NavbarListItem>
-        <S.NavbarListItem isChecked={isChecked} isNavbar={navbar} onClick={scrollToSection} data-target="home">Projects</S.NavbarListItem>
         <S.NavbarListItem isChecked={isChecked} isNavbar={navbar} onClick={scrollToSection} data-target="home">Skills</S.NavbarListItem>
+        <S.NavbarListItem isChecked={isChecked} isNavbar={navbar} onClick={scrollToSection} data-target="home">Projects</S.NavbarListItem>
         <S.NavbarListItem isChecked={isChecked} isNavbar={navbar} onClick={scrollToSection} data-target="home">About</S.NavbarListItem>
         <S.NavbarListItem isChecked={isChecked} isNavbar={navbar} onClick={scrollToSection} data-target="home">Contact</S.NavbarListItem>
       </S.NavbarList>
