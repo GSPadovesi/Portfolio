@@ -4,6 +4,7 @@ export const Wrapper = styled.div<any>`
   ${({ isChecked }) => css`
     background-color: ${isChecked ? '#24282C' : '#F2F5ED'};
   `}
+  
   position: fixed;
   bottom: -42px;
   right: -58px;

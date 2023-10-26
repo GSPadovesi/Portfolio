@@ -3,7 +3,8 @@ import styled, { css } from "styled-components";
 export const Iconcircle = styled.div<any>`
   ${({ isChecked }) => css`
     background-color: ${isChecked ? '#24282C' : '#F2F5ED'};
-`}
+  `}
+  
   position: relative;
   width: 100px;
   height: 100px;
@@ -11,7 +12,6 @@ export const Iconcircle = styled.div<any>`
   overflow: hidden;
   transition: all 0.5s ease-in-out;
   cursor: pointer;
-
 
   &::before {
     content: "";

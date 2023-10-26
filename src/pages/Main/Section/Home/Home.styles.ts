@@ -49,6 +49,7 @@ export const HomeImage = styled.div<HomeProps>`
   ${({ isOpen }) => css`
     z-index: ${isOpen ? '-1' : '0'};
   `}
+  
   width: 100%;
   display: flex;
   justify-content: center;

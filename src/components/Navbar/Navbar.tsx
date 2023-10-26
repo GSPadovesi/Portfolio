@@ -48,10 +48,10 @@ export const Navbar = ({ isOpen, setIsOpen, isChecked, setIsChecked }: NavbarPro
       <S.WrapperSwitch>
         <S.LabelDark for='change-theme'>
           <S.InputDark type='checkbox' name='change-theme' id='change-theme' onClick={changeTheme} />
-          <S.WrapperSwitchDark isChecked={isChecked === true}>
+          <S.WrapperSwitchDark isChecked={isChecked}>
             <img className='sun' src={sun} alt="Sol" />
             <img className='moon' src={moon} alt="Lua" />
-            <S.ButtonSwitch isChecked={isChecked === true} />
+            <S.ButtonSwitch isChecked={isChecked} />
           </S.WrapperSwitchDark>
         </S.LabelDark>
       </S.WrapperSwitch>
@@ -60,7 +60,7 @@ export const Navbar = ({ isOpen, setIsOpen, isChecked, setIsChecked }: NavbarPro
         <Hamburger isOpen={isOpen} setIsOpen={setIsOpen} />
       </S.HamburgerContainer>
 
-      <S.Fade isOpen={isOpen} />
+      <S.Fade isOpen={isOpen} isChecked={isChecked} />
     </S.Navbar>
   )
 }

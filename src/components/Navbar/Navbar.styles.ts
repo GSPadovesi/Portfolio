@@ -27,9 +27,9 @@ export const Navbar = styled.nav<NavItemsProps>`
 
 export const NavbarTitle = styled.h1<NavItemsProps>`
   ${({ isChecked, isNavbar }) => css`
-      color: ${isNavbar === false ? '#F2F5ED' : !!isNavbar && !!isChecked ? '#F2F5ED' : '#24282C'};
+    color: ${isNavbar === false ? '#F2F5ED' : !!isNavbar && !!isChecked ? '#F2F5ED' : '#24282C'};
   `}
-  /* color: #F2F5ED; */
+
   font-size: 22px;
   font-weight: 400;
 `
@@ -45,14 +45,15 @@ export const NavbarList = styled.ul<NavItemsProps>`
     position: absolute;
     top: ${isOpen ? '300px' : '-700px'};
     right: ${isOpen ? '0' : '-100%'};
-    margin-left: auto;
-    margin-right: auto;
-    text-align: center;
     width: ${isOpen ? '100%' : '0'};
-    transition: all .6s ease;
-    z-index: 20;
-    cursor: pointer;
   `}
+
+  margin-right: auto;
+  text-align: center;
+  margin-left: auto;
+  transition: all .6s ease;
+  z-index: 20;
+  cursor: pointer;
 
   @media(min-width: 768px) {
     position: initial;
@@ -63,7 +64,11 @@ export const NavbarList = styled.ul<NavItemsProps>`
 
 export const NavbarListItem = styled.li<NavItemsProps>`
   ${({ isChecked, isNavbar }) => css`
-    color: ${isNavbar === false ? '#F2F5ED' : !!isNavbar && !!isChecked ? '#F2F5ED' : '#24282C'};
+    color: ${isChecked ? '#F2F5ED' : '#24282C'};
+
+    @media(min-width: 768px) {
+      color: ${isNavbar === false ? '#F2F5ED' : !!isNavbar && !!isChecked ? '#F2F5ED' : '#24282C'};
+    }
   `}
 
   display: block;
@@ -92,14 +97,16 @@ export const HamburgerContainer = styled.div`
 `;
 
 export const Fade = styled.div<NavItemsProps>`
-  ${({ isOpen }) => css`
+  ${({ isOpen, isChecked }) => css`
     width: ${isOpen ? '100%' : '0'};
     height: ${isOpen ? '100vh' : '0'};
     top: ${isOpen ? '6rem' : '-700px'};
     right: ${isOpen ? '0' : '-1000px'};
+    background-color: ${isChecked ? '#24282C' : '#F2F5ED'};
   `}
+
   position: absolute;
-  background-color: #24282C;
+  /* background-color: #24282C; */
   transition: all 0.5s ease;
   border-radius: 0 0 0 50%;
   z-index: 10;
@@ -107,8 +114,6 @@ export const Fade = styled.div<NavItemsProps>`
 
 export const WrapperSwitch = styled.div`
   width: auto;
-  /* position: absolute; */
-  /* right: px; */
   gap: 20px;
   align-self: center;
   justify-self: center;
@@ -131,9 +136,19 @@ export const InputDark = styled.input<any>`
 `
 
 export const WrapperSwitchDark = styled.div<NavItemsProps>`
+  ${({ isChecked }) => css`
+    background-color: ${isChecked ? '#18D26F' : '#485550'};
+    border: ${isChecked ? '1px solid #F2F5ED' : '1px solid #000'};
+      
+    .moon{
+      opacity: ${isChecked ? 0 : 1};
+    }
+
+    .sun{
+      opacity: ${!!isChecked ? 1 : 0};
+    }
+  `}
   position: relative;
-  /* padding: 6px; */
-  background-color: #485550;
   width: 50px;
   height: 20px;
   border-radius: 20px;
@@ -151,7 +166,6 @@ export const WrapperSwitchDark = styled.div<NavItemsProps>`
     top: 1px;
     left: 5px;
     transition: all 0.3s ease-in-out;
-    opacity: 0;
   }
 
   .moon{
@@ -160,33 +174,19 @@ export const WrapperSwitchDark = styled.div<NavItemsProps>`
     right: 5px;
     transition: all 0.3s ease-in-out;
   }
-
-  ${({ isChecked }) => isChecked && css`
-    background-color: #18D26F;
-
-    .moon{
-      opacity: 0;
-    }
-
-    .sun{
-      opacity: 1;
-    }
-  `}
 `
 
-export const ButtonSwitch = styled.button<any>`
+export const ButtonSwitch = styled.button<NavItemsProps>`
+  ${({ isChecked }) => css`
+    left: ${isChecked ? '30px' : '2px'};
+    background-color: ${isChecked ? '#F2F5ED' : '#18D26F'};
+  `}
+  
   position: absolute;
-  background-color: #F2F5ED;
   width: 16px;
   height: 16px;
   border-radius: 50%;
   top: 1px;
-  left: 2px;
   transition: all 0.3s ease-in-out;
   pointer-events: none;
-
-  ${({ isChecked }) => isChecked && css`
-    left: 30px;
-    background-color: #F2F5ED;
-  `}
 `
