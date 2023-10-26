@@ -504,6 +504,13 @@
   dependencies:
     "@types/react" "*"
 
+"@types/react-typical@^0.1.1":
+  version "0.1.1"
+  resolved "https://registry.yarnpkg.com/@types/react-typical/-/react-typical-0.1.1.tgz#f767db1f83eb6b841844c6fabb153b67b5a720b3"
+  integrity sha512-4RXtaaRNu0IU+L0ShVKhL8JkG8/FpXFacNoY0D8EOmeEZuJR13R9XTFhSxWGmpv+HT4Vs13ebBUpzbR0XahKjA==
+  dependencies:
+    "@types/react" "*"
+
 "@types/react@*", "@types/react@^18.2.15":
   version "18.2.31"
   resolved "https://registry.yarnpkg.com/@types/react/-/react-18.2.31.tgz#74ae2630e4aa9af599584157abd3b95d96fb9b40"
