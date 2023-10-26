@@ -24,7 +24,7 @@ function App() {
         <BrowserRouter>
           <Navbar isOpen={isOpen} setIsOpen={setIsOpen} isChecked={isChecked} setIsChecked={setIsChecked} />
           <Routes>
-            <Route path="/" element={<Main isOpen={isOpen} isChecked={isChecked} />} />
+            <Route path="/Portfolio" element={<Main isOpen={isOpen} isChecked={isChecked} />} />
           </Routes>
           <Github isChecked={isChecked} />
         </BrowserRouter >
