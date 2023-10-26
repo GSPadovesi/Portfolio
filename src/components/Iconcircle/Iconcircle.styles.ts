@@ -94,5 +94,5 @@ export const Title = styled.h2`
 
 export const Span = styled.span`
   font-weight: 300;
-  font-size: 0%.75em;
+  font-size: .75em;
 `

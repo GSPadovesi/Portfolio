@@ -13,6 +13,7 @@ export const Navbar = ({ isOpen, setIsOpen, isChecked, setIsChecked }: NavbarPro
     const target = e.target.dataset.target;
     const element = document.getElementById(target);
     element?.scrollIntoView({ behavior: 'smooth' });
+    setIsOpen(false);
   }
 
   const changeTheme = () => {
@@ -35,7 +36,7 @@ export const Navbar = ({ isOpen, setIsOpen, isChecked, setIsChecked }: NavbarPro
 
   return (
     <S.Navbar isNavbar={navbar} isChecked={isChecked === true}>
-      <S.NavbarTitle isChecked={isChecked === true} isNavbar={navbar}>Meu <S.NavbarTitleStrong>Portfolio</S.NavbarTitleStrong></S.NavbarTitle>
+      <S.NavbarTitle isChecked={isChecked === true} isNavbar={navbar}>Gabriel <S.NavbarTitleStrong>Santana</S.NavbarTitleStrong></S.NavbarTitle>
 
       <S.NavbarList isOpen={isOpen}>
         <S.NavbarListItem isChecked={isChecked} isNavbar={navbar} onClick={scrollToSection} data-target="home">Home</S.NavbarListItem>
