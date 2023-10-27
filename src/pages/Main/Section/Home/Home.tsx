@@ -18,8 +18,8 @@ export const Home = ({ isOpen }: HomeProps) => {
           <S.HomeContent>
             <S.HomeTitle>Transformando ideias em experiências </S.HomeTitle>
             <S.HomeTitleStrong>digitais incríveis.</S.HomeTitleStrong>
-            <S.HomeDescription><Typical loop={1} steps={steps} wrapper='span' /></S.HomeDescription>
-            {/* <S.HomeDescription>Desenvolvedor front-end</S.HomeDescription> */}
+            {/* <S.HomeDescription><Typical loop={1} steps={steps} wrapper='span' /></S.HomeDescription> */}
+            <S.HomeDescription>Desenvolvedor Web</S.HomeDescription>
           </S.HomeContent>
           <S.HomeImage isOpen={isOpen}>
             <img src={rocket} alt="" />

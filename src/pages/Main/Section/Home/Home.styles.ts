@@ -145,6 +145,12 @@ export const HomeDescription = styled.p`
   font-size: 20px;
   text-align: left;
   margin-top: 32px;
+  font-family: monospace;
+  border-right: 2px solid #F2F5ED;
+  width: 17ch;
+  white-space: nowrap;
+  overflow: hidden;
+  animation: typical 2s steps(17), blink 0.5s infinite step-end alternate;
 
   @media(min-width: 768px){
     font-size: 30px;
@@ -152,5 +158,15 @@ export const HomeDescription = styled.p`
 
   @media(min-width: 1024px){
     margin-left: 10px;
+  }
+
+  @keyframes typical {
+    from { width: 0; }
+  }
+
+  @keyframes blink {
+    50%{
+      border-color: transparent;
+    }
   }
 `
