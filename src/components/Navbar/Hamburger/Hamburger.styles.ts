@@ -30,6 +30,7 @@ export const HamburgerContainer = styled.div<any>`
 export const Hamburger = styled.span<any>`
   ${({ isOpen }) => css`
     position: relative;
+    width: 22px;
     transition: background-color 0.4s ease margin-right 0.4s ease;
     border-bottom: 4px solid #fff;
     border-radius: 2px;
