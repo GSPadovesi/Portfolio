@@ -14,7 +14,7 @@ export function ThreeComponent() {
   useEffect(() => {
     const canvas = canvasRef.current;
     const scene = new THREE.Scene();
-    const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
+    const camera = new THREE.PerspectiveCamera(75, canvas.offsetWidth / canvas.offsetHeight, 0.1, 1000);
     const renderer = new THREE.WebGLRenderer({ antialias: true });
 
     camera.position.z = 15;
@@ -80,6 +80,29 @@ export function ThreeComponent() {
   }, [])
 
 
-  return <div ref={canvasRef} style={{ width: '100%', height: '100%' }}></div>
+
+
+  return (
+    <>
+      <style>
+        {`
+        #canvas{
+       
+
+          @media(max-width: 768px){
+            width: 100%;
+            height: 100%;
+          }
+
+          @media(min-width: 1024px){
+            width: 100%;
+            height: 100%;
+          }
+        }
+        `}
+      </style>
+      <div id='canvas' ref={canvasRef} ></div>
+    </>
+  )
 }
 

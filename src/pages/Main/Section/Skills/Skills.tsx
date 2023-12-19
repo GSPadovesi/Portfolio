@@ -16,7 +16,15 @@ export const Skills = ({ isChecked }: SkillsProps) => {
       <S.SkillsContainer>
         <S.SkillsItems>
           <S.SkillsTitle>Skills</S.SkillsTitle>
-          <Iconcircle isChecked={isChecked} image={JS} title='Javascript' subtitle='Programação' />
+          <S.SkillsItem>
+            <Iconcircle isChecked={isChecked} image={JS} title='Javascript' subtitle='Programação' />
+            <Iconcircle isChecked={isChecked} image={JS} title='Javascript' subtitle='Programação' />
+          </S.SkillsItem>
+          <S.SkillsItem>
+            <Iconcircle isChecked={isChecked} image={JS} title='Javascript' subtitle='Programação' />
+            <Iconcircle isChecked={isChecked} image={JS} title='Javascript' subtitle='Programação' />
+          </S.SkillsItem>
+
         </S.SkillsItems>
         <S.SkillsCanva>
           <ThreeComponent />
