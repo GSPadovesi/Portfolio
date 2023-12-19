@@ -10,7 +10,7 @@ function App() {
 
   const [isOpen, setIsOpen] = useState(false);
   const [isChecked, setIsChecked] = useState(true);
-  const [loading, setLoading] = useState(true);
+  const [loading, setLoading] = useState(false);
 
   useEffect(() => {
     setTimeout(() => {

@@ -29,11 +29,6 @@ export const Navbar = ({ isOpen, setIsOpen, isChecked, setIsChecked }: NavbarPro
   }
   window.addEventListener('scroll', changeBackground)
 
-  console.log('Navbar', navbar);
-  console.log('IsChecked', isChecked);
-
-
-
   return (
     <S.Navbar isNavbar={navbar} isChecked={isChecked === true}>
       <S.NavbarTitle isChecked={isChecked === true} isNavbar={navbar}>Gabriel <S.NavbarTitleStrong>Santana</S.NavbarTitleStrong></S.NavbarTitle>

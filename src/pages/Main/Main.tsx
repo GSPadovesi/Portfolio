@@ -5,8 +5,8 @@ import { Skills } from "./Section/Skills/Skills"
 export const Main = ({ isOpen, isChecked }: MainProps) => {
   return (
     <>
-      {/* <Home isOpen={isOpen} /> */}
-      {/* <Skills isChecked={isChecked} /> */}
+      <Home isOpen={isOpen} />
+      <Skills isChecked={isChecked} />
     </>
   )
 }
