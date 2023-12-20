@@ -20,9 +20,6 @@ export function ThreeComponent() {
     camera.position.z = 15;
     renderer.setSize(canvas.offsetWidth, canvas.offsetHeight);
     renderer.setPixelRatio(window.devicePixelRatio);
-    canvas.appendChild(renderer.domElement);
-
-    console.log(canvas.offsetWidth)
 
     //Criando sphere
     const sphere = new THREE.Mesh(new THREE.SphereGeometry(5, 50, 50), new THREE.ShaderMaterial({ vertexShader, fragmentShader, uniforms: { globeTexture: { value: new THREE.TextureLoader().load(Earth) } } }));
@@ -30,10 +27,10 @@ export function ThreeComponent() {
     const group = new THREE.Group();
 
     atmosphere.scale.set(1.1, 1.1, 1.1);
+
     scene.add(atmosphere)
     group.add(sphere);
     scene.add(group);
-    // scene.add(sphere, atmosphere);
 
     const starGeometry = new THREE.BufferGeometry();
     const starMaterial = new THREE.PointsMaterial({ color: 0xffffff });
@@ -59,7 +56,7 @@ export function ThreeComponent() {
     function animate() {
       requestAnimationFrame(animate);
       renderer.render(scene, camera);
-      sphere.rotation.y += 0.004;
+      sphere.rotation.y += 0.001;
       gsap.to(group.rotation, {
         x: -mouse.y * 0.5,
         y: mouse.x * 0.5,
@@ -75,7 +72,9 @@ export function ThreeComponent() {
       mouse.y = -(event.clientY / innerHeight) * 2 + 1;
     })
 
+    console.log(group)
 
+    canvas.appendChild(renderer.domElement)
     return () => { canvas.removeChild(renderer.domElement) };
   }, [])
 
