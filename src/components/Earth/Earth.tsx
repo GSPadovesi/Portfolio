@@ -57,7 +57,8 @@ export function ThreeComponent() {
     function animate() {
       requestAnimationFrame(animate);
       renderer.render(scene, camera);
-      sphere.rotation.y += 0.001;
+      sphere.rotation.y += 0.002;
+      sphere.rotation.x += 0.002;
       gsap.to(group.rotation, {
         x: -mouse.y * 0.5,
         y: mouse.x * 0.5,
@@ -80,19 +81,10 @@ export function ThreeComponent() {
     <>
       <style>
         {`
-        #canvas{
-       
-
-          @media(max-width: 768px){
+          #canvas{
             width: 100%;
             height: 100%;
           }
-
-          @media(min-width: 1024px){
-            width: 100%;
-            height: 100%;
-          }
-        }
         `}
       </style>
       <div id='canvas' ref={canvasRef} ></div>
