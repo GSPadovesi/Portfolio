@@ -3,4 +3,5 @@ export interface IconcircleProps {
   image: string;
   title: string;
   subtitle: string;
+  isColor: string;
 }

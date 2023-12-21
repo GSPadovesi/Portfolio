@@ -1,8 +1,18 @@
 import styled, { css } from "styled-components";
 
 export const Iconcircle = styled.div<any>`
-  ${({ isChecked }) => css`
+  ${({ isChecked, isColor }) => css`
     background-color: ${isChecked ? '#24282C' : '#F2F5ED'};
+
+    &::before {
+    content: "";
+    position: absolute;
+    inset: -10px 30px;
+    transition: all 0.3s ease-in-out;
+    background: linear-gradient(315deg, ${isColor}, #24282C);
+    animation: animar 5s linear infinite;
+  }
+
   `}
   
   position: relative;
@@ -13,14 +23,6 @@ export const Iconcircle = styled.div<any>`
   transition: all 0.5s ease-in-out;
   cursor: pointer;
 
-  &::before {
-    content: "";
-    position: absolute;
-    inset: -10px 30px;
-    transition: all 0.3s ease-in-out;
-    background: linear-gradient(315deg, #18D26F, #24282C);
-    animation: animar 5s linear infinite;
-  }
 
   &::after{
     content: "";
