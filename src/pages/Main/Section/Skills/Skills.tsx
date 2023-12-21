@@ -12,10 +12,6 @@ import MONGODB from '../../../../assets/mongodb.png';
 import GRAPHQL from '../../../../assets/graphql.png';
 import * as S from './Skills.styles';
 
-let Skill = [{
-
-}]
-
 export const Skills = ({ isChecked }: SkillsProps) => {
 
   return (
