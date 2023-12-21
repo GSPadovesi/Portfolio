@@ -1,5 +1,6 @@
 import { useEffect, useRef } from 'react'
 import Earth from '../../assets/terra.jpeg'
+import EarthCloud from '../../assets/earthCloud.png'
 import vertexShader from '../../shaders/vertex.glsl'
 import fragmentShader from '../../shaders/fragment.glsl'
 import atmosphereVertexShader from '../../shaders/atmosphereVertex.glsl'
@@ -37,6 +38,7 @@ export function ThreeComponent() {
     const stars = new THREE.Points(starGeometry, starMaterial);
     const starVertices = [];
 
+
     for (let i = 0; i < 10000; i++) {
       const x = (Math.random() - 0.5) * 2000;
       const y = (Math.random() - 0.5) * 2000;
@@ -52,7 +54,6 @@ export function ThreeComponent() {
       y: 0
     }
 
-
     function animate() {
       requestAnimationFrame(animate);
       renderer.render(scene, camera);
@@ -66,20 +67,14 @@ export function ThreeComponent() {
 
     animate();
 
-
     addEventListener('mousemove', (event) => {
       mouse.x = (event.clientX / innerWidth) * 2 - 1;
       mouse.y = -(event.clientY / innerHeight) * 2 + 1;
     })
 
-    console.log(group)
-
-    canvas.appendChild(renderer.domElement)
+    return () => { canvas.appendChild(renderer.domElement) };
     return () => { canvas.removeChild(renderer.domElement) };
   }, [])
-
-
-
 
   return (
     <>
