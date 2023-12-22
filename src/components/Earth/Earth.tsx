@@ -57,13 +57,13 @@ export function ThreeComponent() {
     function animate() {
       requestAnimationFrame(animate);
       renderer.render(scene, camera);
-      sphere.rotation.y += 0.002;
-      sphere.rotation.x += 0.002;
-      gsap.to(group.rotation, {
-        x: -mouse.y * 0.5,
-        y: mouse.x * 0.5,
-        duration: 2
-      })
+      sphere.rotation.y += 0.004;
+      // sphere.rotation.x += 0.004;
+      // gsap.to(group.rotation, {
+      //   x: -mouse.y * 0.5,
+      //   y: mouse.x * 0.5,
+      //   duration: 2
+      // })
     };
 
     animate();
@@ -73,7 +73,7 @@ export function ThreeComponent() {
       mouse.y = -(event.clientY / innerHeight) * 2 + 1;
     })
 
-    return () => { canvas.appendChild(renderer.domElement) };
+    canvas.appendChild(renderer.domElement)
     return () => { canvas.removeChild(renderer.domElement) };
   }, [])
 

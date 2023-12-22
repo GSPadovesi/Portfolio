@@ -1,7 +1,7 @@
 import styled from "styled-components";
+import Galaxia from '../../../../assets/galaxia.jpg'
 
 export const Skills = styled.section`
-  /* padding: 0px 32px; */
   width: 100%;
   height: 100vh;
   background-color: #000;
